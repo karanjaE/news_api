@@ -1,24 +1,30 @@
-# README
+# TECH NEWS API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Api to get tech news from the news api
 
-Things you may want to cover:
+## Endpoints:
+`/` : Returns top ten news articles
+`/headlines`: Retuns the top ten tech news headlines
 
-* Ruby version
+## Setting up
+- Clole the repo: `git clone https://github.com/ranchow/news_api.git`
+- cd into the project folder.
+- Run `bundle install` to install dependencies.
+- make a copy of the `.env`: `cp .env.development .env`
+- Go to `https://newsapi.org/docs/endpoints/top-headlines` and generate a new API key.
+- Replace the key in `.env` with the one you created.
 
-* System dependencies
+## Running the App
+- Start the rails server: `rails s`
+-  Using an API client eg `Postman` go to `localhost:3000`
 
-* Configuration
+### On heroku
+Go to `https://tech-news-api.herokuapp.com` from your API client
 
-* Database creation
+## Running tests
+- Run `bundle exec rspec` to run all tests.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Improvements
+I plan to add more functionality to the app like:
+- Enabling a user to set their own query parameters.
+- Adding a client side application to consume the API.
